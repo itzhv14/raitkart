@@ -6,3 +6,6 @@ RAITkart is an online store exclusively for the students of DY Patil's Ramrao Ad
 We have taken utmost care of student's profile and personal details. The student can easily register and then put up the products he/she wants to sell. The one who wants to buy or view the products also have to register then sign in. The buyer can negotiate with the seller using the chat box provided.
 
 This website is built with the intention to help students of the college to responsibly manage their belongings.
+
+The website is hosted at:
+http://raitkart.pythonanywhere.com/
