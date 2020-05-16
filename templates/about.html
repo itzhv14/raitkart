@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About us</title>
+	<link rel="stylesheet" type="text/css" href="about.css">
+  <link rel="stylesheet"  href="{{ url_for('static',filename='about.css')}}">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+
+
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
+  <a class="navbar-brand">RAITkart</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+
+            {% if session.logged_in==False %}
+      <li class="nav-item active">
+        <a class="nav-link" href="/home">Home </a>
+      </li>
+              {% endif %}
+
+
+
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More </a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" href="/about">About Us</a>
+          <a class="dropdown-item" href="/contact">Contact Us</a>
+      	</div>
+      </li>
+
+
+            {% if session.logged_in %}
+                <li class="nav-item active">
+                  <a class="nav-link" href="/dashboard">Dashboard </a>
+                </li>
+                      <li class="nav-item">
+                <a class="nav-link active" href="/products">My Products</a>
+            </li>
+</ul>
+
+        
+               <center>
+                             <ul class="navbar-nav ml-auto" style="left: auto ;right: 0px;">
+
+                  <li class="nav-item active">
+                  <div class="nav-link">
+                   Hello {{ session.name  }} !!
+                  </div>
+                  </li>
+              </center>
+            </ul>
+             <ul class="navbar-nav ml-auto" style="left: auto ;right: 0px;">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/chat">My Chat </a>
+                </li>
+
+               <li class="nav-item active">
+                  <a class="nav-link" href="/profile">My Profile </a>
+                </li>
+
+
+                <li class="nav-item active">
+                  <a class="nav-link" href="/logout">Logout </a>
+                </li>
+            {% else %}
+
+                <li class="nav-item active">
+                  <a class="nav-link" href="/login">Login </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/register">Register </a>
+                </li>
+            {% endif %}
+
+          </ul>
+
+
+  </div>
+</nav>
+
+
+
+
+	
+	<section id="aboutus">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-7">
+					<h1 class="text-center">About US</h1>
+					<p><b>RAITkart</b> is an online store exclusively for the students of DY Patil's Ramrao Adik Intitute of Technology. This website will povide students a platform to sell their products( could be anything ranging from lab equipments to books) and also to buy from others.
+					<p>We have taken utmost care of student's profile and personal details. The student can easily register and then put up the products he/she wants to sell. The one who wants to buy or view the products also have to register then sign in. The buyer can negotiate with the seller using the chat box provided.</p>
+				    <p>This website is built with the intention to help students of the college to responsibly manage their belongings.</p>
+
+				</div>
+				<div class="col-sm-5">
+					<div class="image">
+						<img src="https://www.incimages.com/uploaded_files/image/970x450/getty_663974538_353364.jpg">
+					</div>
+
+					
+				</div>
+			</div>
+
+
+			                              
+		</div>
+	</section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>

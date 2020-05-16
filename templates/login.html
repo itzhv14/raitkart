@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+      {% block body %}
+
+      	        {% from "includes/_formhelpers.html" import render_field %}
+      
+<header class="masthead">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>Login</h1>
+				<hr>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+           <div style="border: 2px solid black; padding: 15px;">
+          <form method="POST" action="">
+		        <div class="form-group">
+			  {{render_field(form.roll_no, class_="form-control hg")}} </div>
+		    <div class="form-group">
+		      {{render_field(form.password, class_="form-control hg")}}
+			</div>
+
+                  <div>
+                      <center>
+                        <button type="submit" class="button"><span>Login</span></button>
+                      </center>
+                  </div>
+
+               </form>
+		    </div>
+	
+      {% endblock %}

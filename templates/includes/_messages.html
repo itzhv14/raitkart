@@ -1,0 +1,46 @@
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+<center>
+  <div class="alert alert-{{ category }} alert-dismissible fade show hideDiv col-xs-3 col-md-6 message" role="alert">{{ message }}
+         <button type="button" class='close' data-dismiss="alert" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+    </button>
+      </div>
+</center>
+
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+{% if error %}
+<center>
+    <div class="alert alert-danger alert-dismissible fade show hideDiv col-xs-3 col-md-6 message" role="alert">{{error}}
+    <button type="button" class='close' data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</center>
+
+{% endif %}
+
+{% if msg %}
+  <center>
+    <div class="alert alert-success alert-dismissible fade show hideDiv col-xs-3 col-md-6 message" role="alert">{{msg}}
+       <button type="button" class='close' data-dismiss="alert" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </center>
+
+{% endif %}
+ <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script>
+        //When the page has loaded.
+        $( document ).ready(function(){
+            $('.message').fadeIn('slow', function(){
+               $('.message').delay(5000).fadeOut();
+            });
+        });
+        </script>

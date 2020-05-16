@@ -1,0 +1,21 @@
+
+ {% extends 'layout.html' %}
+
+ {% block body %}
+ <h1>My Chats  </h1>
+  <hr>
+
+
+ {% for i in lis %}
+ {% if i.upper() != session['roll_no'].upper() %}
+
+  <button type="submit" class="button rbutton"><a href="/chat/{{i}}" style="color: white"><span>{{i.upper()}}</span></a></button>
+<hr>
+
+
+ {% endif %}
+{% endfor %}
+
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+body section{
+	background-image: url("https://img.freepik.com/free-vector/abstract-technology-particle-background_52683-25766.jpg?size=626&ext=jpg");
+
+	justify-content: center;
+	align-items: center;
+}
+.navbar{
+justify-content: top;
+	align-items: top;
+    color: white;
+}
+
+.image{width: 100%}
+.image img{
+	width: 100%;
+	padding: 10px;
+	border-radius: 50%;
+	box-shadow: 0 0 10px #999999;
+
+}
+p{
+	color: white;
+}
+h1{
+	color: white;
+}

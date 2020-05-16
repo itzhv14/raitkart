@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>{{product.title}}</h1><hr>
+<b>Seller - </b> {{product.roll_no.upper()}}
+<hr>
+<div class="card" style="width:300px; margin-right: px; border-color: black;">
+    <img class="card-img-top" src="/static/images/{{product.photo}}" alt="{{product.photo}}" style="width:100%">
+</div>
+
+
+
+  <hr>
+<b>Posted on:</b> {{product.date}}
+  <hr>
+<b>Price: </b> {{product.price}}
+    <hr>
+   <b> Category:</b> {{product.category}}
+  <hr>
+<b> Details of Products: </b> {{product.description}} <hr>
+ <b> Contact Details: </b> {{product.phone_no}}
+<br><hr>
+<button class="smbutton button"><a href="/chat/{{product.roll_no}}" style="color: white"><span>Chat</span></a></button>
+<hr>
+{% endblock %}

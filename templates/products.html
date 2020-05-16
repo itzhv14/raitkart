@@ -1,0 +1,30 @@
+
+ {% extends 'layout.html' %}
+
+ {% block body %}
+ <h1>My Products  </h1>
+  <hr>
+ <div class="card-deck">
+    {% for product in products %}
+
+   <div class="" style="padding-bottom: 25px;   margin-right: 5px;">
+  <div class="card" style="width:300px; margin-right: px; border-color: black;">
+    <img class="card-img-top" src="/static/images/{{product.photo}}" alt="{{product.photo}}" style="width:100%; height: 500px;">
+    <div class="card-body">
+      <h4 class="card-title">{{product.title}}</h4>
+      <p class="card-text">Price: {{product.price}}</p>
+<center>
+        <button class="button rbutton smbutton"><a href="/edit_product/{{product.id}}" style="color: white"><span>Edit</span></a></button>
+            <form action="{{url_for('delete_product', id=product.id)}}" method="post">
+             <input type="hidden" name="_method" value="">
+
+                        <button class="smbutton button"><a href="" style="color: white"><span>Delete</span></a></button>
+
+          </form>
+        </center>
+
+    </div>
+  </div>  </div>
+      {% endfor %}
+  </div>
+{% endblock %}

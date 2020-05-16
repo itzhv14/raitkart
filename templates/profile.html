@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Your Profile</h1><hr><br>
+<p style="font-size:large">
+    <b>Roll No:</b> {{user.roll_no}}<br>
+    <b>Name:</b> {{user.name}}<br>
+    <b>Email:</b> {{user.email}}<br>
+    <b>Phone No:</b> {{user.phone_no}}<br>
+</p>
+<hr><br>
+<a href="/edit_profile" ><span>Change profile details</span></a>
+<br>
+<a href="/edit_password" ><span>Change password</span></a>
+
+{% endblock %}

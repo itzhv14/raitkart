@@ -1,0 +1,45 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+ {% if session.logged_in %}
+  <div class="jumbotron text-center">
+      		  <h1>RAITkart</h1>
+      <p class="lead">Welcome <b style="font-size:1.15em;">{{session.name}}</b> to our website. You can buy or sell old books, notes, computer equips and many more stuffs!!</p>
+      	   </div>
+
+
+         <div>
+            <center>
+            <button class="button"><a href="/buy" style="color: white"><span>Buy</span></a></button>
+            <button class="button rbutton"><a href="/sell" style="color: white"><span>Sell</span></a></button>
+            </center>
+           </div>
+        </div>
+        <br>
+
+
+
+    {% else %}      
+           <div class="container containerhome">
+
+      	   <div class="jumbotron text-center">
+      		  <h1>RAITkart</h1>
+      		  <p class="lead">Welcome to our website. You can buy or sell old books, notes, computer equips and many more stuffs!!</p>
+      	   </div>
+      	   
+<hr>
+<br>
+         <div>
+            <center>
+            <button class="button"><a href="/login" style="color: white"><span>Login</span></a></button>
+            <button class="button rbutton"><a href="/register" style="color: white"><span>Register</span></a></button>
+            </center>
+           </div>
+        </div>
+
+      {% endif %} 
+     
+{% endblock %}
